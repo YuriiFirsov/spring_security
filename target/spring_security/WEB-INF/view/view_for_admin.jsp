@@ -13,6 +13,6 @@
 <body>
 Страничка админа
 <br><br><br><br><br><br>
-<input type="button" value="Назад" onclick="window.location.href = 'main_page'">
+<input type="button" value="Назад" onclick="window.location.href = '/'">
 </body>
 </html>

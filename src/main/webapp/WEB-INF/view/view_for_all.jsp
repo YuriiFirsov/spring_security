@@ -1,3 +1,4 @@
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: firso
@@ -13,9 +14,13 @@
 <body>
 <h3>Страница для всех</h3>
 <br>
-Только для директора -  <input type="button" value="Директор" onclick="window.location.href = 'boss_page'">
-<br>
-Только для админа - <input type="button" value="Админ" onclick="window.location.href = 'admin_page'">
+<security:authorize access="hasRole('BOSS')">
+    Только для директора -  <input type="button" value="Директор" onclick="window.location.href = 'boss_page'">
+</security:authorize>
 
+<br>
+<security:authorize access="hasRole('ADMIN')">
+Только для админа - <input type="button" value="Админ" onclick="window.location.href = 'admin_page'">
+</security:authorize>
 </body>
 </html>
