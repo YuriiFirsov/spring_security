@@ -1,1 +1,1 @@
-Простоо приложение со Spring Security
+Простоe приложение со Spring Security
